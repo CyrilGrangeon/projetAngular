@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommentaireService } from '../services/commentaire.service';
 
 @Component({
   selector: 'app-commentaires',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./commentaires.component.css']
 })
 export class CommentairesComponent implements OnInit {
-
-  constructor() { }
+  public allComments!: any[]
+  constructor(private cs:CommentaireService) { }
 
   ngOnInit(): void {
   }
-
+  addComment(form : any) {
+    //console.log(form.value);
+    this.cs.createComment(form.value);
+  }
 }

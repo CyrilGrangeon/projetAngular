@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FilmsComponent } from './films/films.component';
 import { CommentairesComponent } from './commentaires/commentaires.component';
+import { CommentaireListeComponent } from './commentaire-liste/commentaire-liste.component';
+import { CommentaireCardComponent } from './commentaire-card/commentaire-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FilmsComponent,
-    CommentairesComponent
+    CommentairesComponent,
+    CommentaireListeComponent,
+    CommentaireCardComponent
   ],
   imports: [
     BrowserModule,

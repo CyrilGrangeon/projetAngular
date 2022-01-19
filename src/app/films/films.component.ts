@@ -22,7 +22,7 @@ export class FilmsComponent implements OnInit {
     .then(data=>this.setFilmsData(data));
   }
   setFilmsData(data:any):void{
-    
+    this.t
   }
   searchFilm(){
     this.getFilmsData

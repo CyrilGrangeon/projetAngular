@@ -1,11 +1,16 @@
 <h1 class="text-center">Livre d'or</h1>
 <h2 class="text-center">Votre avis nous interresse !!!</h2>
 
-<div class="mb-3 text-center width-50%">
-    <label for="exampleFormControlInput1" class="form-label">Votre Mail</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-  <div class="mb-3 text-center">
-    <label for="exampleFormControlTextarea1" class="form-label">Merci d'écrire un commentaire</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
+<main class="container">
+
+  <form #f="ngForm" (submit)="addComment(f)">
+    <label for="pseudo">Votre pseudo</label>
+    <input type="text" ngModel name = "pseudo" id = "pseudo">
+    <label for="commentaire">Votre commentaire</label>
+    <textarea name="" id="commentaire" ngModel name="commentaire"></textarea>
+    <button type="submit">Ajouter</button>
+  </form>
+
+  <!--<app-commentaire-liste *ngIf="comments" [comments]="comments"></app-commentaire-liste>-->
+
+</main>
